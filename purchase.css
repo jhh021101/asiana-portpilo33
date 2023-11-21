@@ -249,7 +249,6 @@ button {
 }
 
 .ticket_datea a {
-  margin-right: 10px;
   line-height: 1.5rem;
 }
 
@@ -787,6 +786,14 @@ button {
         margin: auto;
         max-width: 1200px;
       } 
+
+      .gnb nav .hd_login {
+        display: none;
+      }
+
+      .searchBar, .sub_p, .mobil_hd{
+        display: none;
+      }
 
       .ticket_reserve,.ticket_reserve2,.itinerary {
         max-width: 1000px;
