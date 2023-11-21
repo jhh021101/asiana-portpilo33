@@ -1562,6 +1562,7 @@ footer> :nth-child(3)> :nth-child(2) img {
       .ticket_datea input {
         background: #ececec;
         width: 30px;
+        margin: 0;
         line-height: 1.2rem;
         border: none;
       }
