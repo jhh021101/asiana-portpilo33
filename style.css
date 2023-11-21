@@ -103,7 +103,7 @@ footer {
 width: 100%;
 margin: auto;
 margin-top: 10%;
-max-width: 1300px;
+max-width: 1200px;
 }
 
 article {
@@ -729,7 +729,6 @@ nav {
 }
 
 .ticket_datea a {
-  margin-right: 10px;
   line-height: 1.5rem;
 }
 
@@ -967,7 +966,6 @@ nav {
 /* asiana_pick 아시아나 여행 픽창 */
 
 .asiana_pick {
-  background-color: #837c7c;
   display: block;
   height: 960px;
   padding:16px 30px;
@@ -1112,7 +1110,6 @@ section h4 {
 }
 
 .gongi {
-  background-color: #837c7c;
   width: 100%;
   padding-bottom: 50px;
 }
@@ -1610,6 +1607,39 @@ footer> :nth-child(3)> :nth-child(2) img {
 
       .special {
         height: 100%;
+      }
+
+      .asiana_pick {
+        height: 100%;
+      }
+
+      .tab_container { 
+        width: 100%; 
+        height: 1200px;
+        overflow: hidden;
+      }
+      
+      .tab_container > div {
+        height: 1200px;
+        color: #fff;
+      }
+
+      #tab01 img {
+        width: 100%;
+      }
+
+      #tab02 img {
+        width: 100%;
+      }
+
+      .gongi {
+        width: 100%;
+        padding-bottom: 50px;
+      }
+
+      .gongi img{
+        width: 800px;
+        padding: 16px 30px;
       }
       
 } 
