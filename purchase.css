@@ -769,7 +769,7 @@ button {
         max-width: 1200px;
       } 
 
-      .itinerary {
+      .ticket_reserve,.ticket_reserve2,.itinerary,.passenger {
         max-width: 1000px;
       }
 
