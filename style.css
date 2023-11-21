@@ -612,10 +612,10 @@ nav {
 
  /* ticket */
 
-.ticket {
-  background-color: #b1adad;
+ .ticket {
+  background-color: #837c7c;
   display: block;
-  height: 840px;
+  height: 930px;
   padding: 40px 30px;
 }
 
@@ -626,7 +626,7 @@ nav {
 }
 
 .ticket_box div> h3 {
-  padding: 16px 10px;
+  padding: 16px 30px;
   font-size: 2.3rem;
   font-weight: bold;
   text-align: center;
@@ -637,7 +637,7 @@ nav {
   background-color: white;
   margin-top: 50px;
   padding: 16px 30px;
-  border-radius: 15px;
+  border-radius: 20px;
   color:  #242424;
 }
 
@@ -677,14 +677,14 @@ nav {
 
 .ticket_tab_container{
   width: 100%; 
-  height: 380px;
+  height: 500px;
   overflow: hidden;
 }
 
 .ticket_tab_container > div{
   width: 100%; 
-  height: 380px;
-  padding: 16px 10px;
+  height: 500px;
+  padding: 16px 30px;
 }
 
 .ticket_list_box1 {
@@ -719,7 +719,54 @@ nav {
 
 .ticket_date1 input {
   background: #ececec;
+  width: 100%;
+  text-align: right;
   border: none;
+}
+
+.ticket_datea {
+  padding: 16px 20px;
+}
+
+.ticket_datea a {
+  margin-right: 10px;
+  line-height: 1.5rem;
+}
+
+.ticket_datea div {
+  background: #ececec;
+  padding: 16px 20px;
+  border-radius: 15px;
+}
+
+.ticket_datea div> .ticket_p {
+  text-align: right;
+}
+
+.ticket_datea input {
+  background: #ececec;
+  width: 40px;
+  text-align: center;
+  border: none;
+}
+
+.ticket_dateb {
+  padding: 16px 20px;
+}
+
+.ticket_dateb div {
+  background: #ececec;
+  padding: 16px 20px;
+  border-radius: 15px;
+}
+
+.ticket_dateb select {
+  background: #ececec;
+  width: 100%;
+  border: none;
+}
+
+.ticket_dateb select option {
   text-align: right;
 }
 
@@ -761,44 +808,9 @@ nav {
 
 .ticket_date2 input {
   background: #ececec;
-  border: none;
+  width: 100%;
   text-align: right;
-}
-
-.ticket_datea {
-  padding: 16px 20px;
-}
-
-.ticket_datea div {
-  background: #ececec;
-  padding: 16px 20px;
-  border-radius: 15px;
-}
-
-.ticket_datea a {
-  margin-right: 12px;
-}
-
-.ticket_datea input {
-  background: #ececec;
   border: none;
-  text-align: center;
-}
-
-.ticket_dateb {
-  padding: 16px 20px;
-}
-
-.ticket_dateb div {
-  background: #ececec;
-  padding: 16px 20px;
-  border-radius: 15px;
-}
-
-.ticket_dateb select {
-  background: #ececec;
-  border: none;
-  text-align: center;
 }
 
 /* check 아시아나 클럽 */
@@ -1338,7 +1350,11 @@ footer> :nth-child(3)> :nth-child(2) img {
         display: block;
       }
 
-      .searchBar, .sub_p, .hd_login, .mobil_hd{
+      .gnb nav .hd_login {
+        display: none;
+      }
+
+      .searchBar, .sub_p, .mobil_hd{
         display: none;
       }
 
@@ -1490,7 +1506,7 @@ footer> :nth-child(3)> :nth-child(2) img {
       
       .ticket_date1 div {
         background: #ececec;
-        width: 160px;
+        width: 200px;
         padding: 16px 20px;
         border-radius: 10px;
       }
@@ -1520,7 +1536,7 @@ footer> :nth-child(3)> :nth-child(2) img {
       
       .ticket_date2 div {
         background: #ececec;
-        width: 160px;
+        width: 200px;
         padding: 16px 20px;
         border-radius: 10px;
       }
@@ -1534,17 +1550,20 @@ footer> :nth-child(3)> :nth-child(2) img {
 
       .ticket_datea div {
         background: #ececec;
-        width: 160px;
+        width: 100%;
         padding: 16px 20px;
         border-radius: 15px;
+      }
+
+      .ticket_datea div> .ticket_p {
+        display: flex;
       }
       
       .ticket_datea input {
         background: #ececec;
-        width: 40px;
-        margin-left: 34px;
+        width: 30px;
+        line-height: 1.2rem;
         border: none;
-        text-align: center;
       }
       
       .ticket_dateb div {
@@ -1559,6 +1578,37 @@ footer> :nth-child(3)> :nth-child(2) img {
         width: 100%;
         border: none;
         text-align: right;
+      }
+
+      .check_box> :nth-child(1) {
+        display: block;
+      }
+
+      .check_box> :nth-child(1) h4 {
+        font-size: 1.4rem;
+      }
+
+      .check_box> :nth-child(1) h3 {
+        margin-bottom: 20px;
+        font-size: 3rem;
+      }
+
+      .check img {
+        width: 45%;
+      }
+
+      .check p {
+        font-size: 1rem;
+      }
+
+      .check button {
+        width: 30%;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+      }
+
+      .special {
+        height: 100%;
       }
       
 } 
