@@ -1,1008 +1,483 @@
-@charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+<!doctype html>
+<html lang="ko">
 
 
-
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  box-sizing: border-box;
-  word-break: keep-all;
-  outline: 0px solid silver;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Noto Sans KR', sans-serif;
-  max-width: 1200px;
-  margin: auto;
-  font-size: 0.9rem;
-  line-height: 1rem;
-  letter-spacing: 0.1px;
-  color: black;
-}
-
-img {
-  width: 100%;
-}
-
-a {
-  transition: all 0.3s;
-  color: black;
-  cursor: pointer;
-}
-
-a:link {
-  color: black;
-  text-decoration: none;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <title>junghunhui</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <style type="text/css"></style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.1/css/jquery.mb.YTPlayer.min.css">
+    
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   
-a:visited {
-    color: black;
-}
-
-a:active {
-    color: black;
-}
-
-ul {
-  padding: 10px 10px;
-}
-
-ul li {
-  list-style: none;
-}
-
-h1 {
-  font-size: 4rem;
-  line-height: 4rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-  line-height: 3.2rem;
-}
-
-h3 {
-  font-size: 2.3rem;
-  line-height: 2.3rem;
-}
-
-h4 {
-  font-size: 1.1rem;
-  line-height: 1.1rem;
-}
-
-h5 {
-  font-size: 0.9rem;
-  line-height: 0.9rem;
-}
-
-.swiper {
-    width: 100%;
-    height: 100%;
-  }
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    align-items: center;
-}
-
-.bodyfixed {
-    overflow-y: hidden;
-}
-
-footer {
-  width: 100%;
-  margin: auto;
-  margin-top: 10%;
-  max-width: 1200px;
-}
-
-article {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  padding: 40px 30px;
-  text-align: center;
-}
-
-button {
-  font-family: 'Noto Sans KR', sans-serif;
-  background: none;
-  margin: 10px 10px;
-  padding: 10px 20px;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  border: 1px solid white;
-}
-
-/* mobile start */
-
-/* ticket 항공권 예매 */
-
- .ticket {
-  background-color: #837c7c;
-  display: block;
-  height: 930px;
-  padding: 40px 30px;
-}
-
-.ticket> div {
-  margin: auto;
-  margin-top: 50px;
-  padding: 16px 30px;
-}
-
-.ticket_box div> h3 {
-  padding: 16px 30px;
-  font-size: 2.3rem;
-  font-weight: bold;
-  text-align: center;
-  line-height: 2.5rem;
-}
-
-.ticket_box {
-  background-color: white;
-  margin-top: 50px;
-  padding: 16px 30px;
-  border-radius: 20px;
-  color:  #242424;
-}
-
-.ticket_box li {
-  list-style: none;
-  margin: auto;
-}
-
-.ticket_wrap ul {
-  display: flex;
-  padding: 16px 30px;
-  border-bottom: 1px solid #4d4c4c;
-}
-
-.ticket_wrap ul p {
-  width: 60px;
-  padding: 14px 16px;
-  font-size: 1rem;
-  text-align: center;
-  border-radius: 20px;
-  color: #4d4c4c;
-}
-
-.ticket_wrap ul :nth-child(3) span{
-  position: relative;
-  right: 8px;
-}
-
-.ticket_tab_btn > li.ticket_active{
-  position: relative;
-}
-
-.ticket_tab_btn > li.ticket_active p{
-  background-color: #4d4c4c;
-  color: white;
-}
-
-.ticket_tab_container{
-  width: 100%; 
-  height: 500px;
-  overflow: hidden;
-}
-
-.ticket_tab_container > div{
-  width: 100%; 
-  height: 500px;
-  padding: 16px 30px;
-}
-
-.ticket_list_box1 {
-  display: flex;
-  padding: 16px 30px;
-  justify-content: space-around;
-}
-
-.ticket_list_box1 div {
-  padding: 8px 20px;
-  text-align: center;
-}
-
-.ticket_list_box1 div h4 {
-  margin-bottom: 8px;
-  font-size: 1.2rem;
-}
-
-.ticket_list_box1 div h5 {
-  font-weight: 100;
-}
-
-.ticket_date1 {
-  padding: 16px 20px;
-}
-
-.ticket_date1 div {
-  background: #ececec;
-  padding: 16px 20px;
-  border-radius: 15px;
-}
-
-.ticket_date1 div p {
-  text-align: left;
-}
-
-.ticket_date1 input {
-  background: #ececec;
-  width: 100%;
-  text-align: right;
-  border: none;
-}
-
-.ticket_datea {
-  padding: 16px 20px;
-}
-
-.ticket_datea a {
-  line-height: 1.5rem;
-}
-
-.ticket_datea div {
-  background: #ececec;
-  padding: 16px 20px;
-  border-radius: 15px;
-}
-
-.ticket_datea div> :nth-child(1) {
-  text-align: left;
-}
-
-.ticket_datea div> .ticket_p {
-  text-align: right;
-}
-
-.ticket_datea input {
-  background: #ececec;
-  width: 40px;
-  text-align: center;
-  border: none;
-}
-
-.ticket_dateb {
-  padding: 16px 20px;
-}
-
-.ticket_dateb div {
-  background: #ececec;
-  padding: 16px 20px;
-  border-radius: 15px;
-}
-
-.ticket_dateb div p {
-  text-align: left;
-}
-
-.ticket_dateb select {
-  background: #ececec;
-  width: 100%;
-  border: none;
-}
-
-.ticket_dateb select option {
-  text-align: right;
-}
-
-.ticket_mg img {
-  position: relative;
-  top: 2px;
-  width: 36px;
-}
-
-.ticket_list_box2 {
-  display: flex;
-  padding: 16px 30px;
-  justify-content: space-around;
-}
-
-.ticket_list_box2 div {
-  padding: 8px 20px;
-  text-align: center;
-}
-
-.ticket_list_box2 div h4 {
-  margin-bottom: 8px;
-  font-size: 1.2rem;
-}
-
-.ticket_list_box2 div h5 {
-  font-weight: 100;
-}
-
-.ticket_date2 {
-  padding: 16px 20px;
-}
-
-.ticket_date2 div {
-  background: #ececec;
-  padding: 16px 20px;
-  border-radius: 15px;
-}
-
-.ticket_date2 p {
-  text-align: left;
-}
-
-.ticket_date2 input {
-  background: #ececec;
-  width: 100%;
-  text-align: right;
-  border: none;
-}
-
-/* ticket_reserve 항공편 예약 */
-
-.ticket_reserve {
-  height: 720px;
-}
-
-.reserve_box1 {
-  margin-top: 20px;
-  border: 1px solid #242424;
-  border-radius: 15px;
-}
-
-.reserve_box1 div{
-  display: flex;
-  justify-content: center;
-}
-
-.reserve_box1 div span {
-  margin: auto;
-  font-size: 1.2rem;
-}
-
-.reserve_box1 div img {
-  width: 50px;
-  padding: 5px 5px;
-}
-
-.reserve_box2 {
-  margin-top: 20px;
-}
-
-.reserve_box2> :nth-child(1) {
-  display: flex;
-  justify-content: center;
-}
-
-.ticket_reserve .reserve_box2 :nth-child(1) span {
-  margin: auto;
-  padding: 10px 10px;
-}
-
-.ticket_reserve .reserve_box2 :nth-child(1) :nth-child(2) {
-  border-bottom: 1px solid brown;
-  color: brown;
-}
-
-.reserve_box2> :nth-child(2) {
-  display: flex;
-  margin-top: 20px;
-  padding: 10px 0px;
-  border-bottom: 1px solid #242424;
-}
-
-.reserve_box2> :nth-child(2) h5 {
-  padding: 5px 30px;
-  font-size: 1.2rem;
-}
-
-.reserve_box2> :nth-child(2) div {
-  display: flex;
-  margin-left: 10px;
-}
-
-.reserve_box2> :nth-child(2) div p {
-  margin: auto;
-  font-size: 0.9rem;
-}
-
-.reserve_box2> :nth-child(2) div img {
-  height: 20px;
-  margin: 5px 10px;
-}
-
-.reserve_box3 .tab_button li{
-  background: white;
-}
-
-.ticket_reserve2 {
-  height: 720px;
-}
-
-.ticket_reserve2 .reserve_box2> div{
-  display: flex;
-  margin-top: 20px;
-  padding: 10px 0px;
-  border-bottom: 1px solid #242424;
-}
-
-.ticket_reserve2 .reserve_box2> div h5 {
-  padding: 5px 30px;
-  font-size: 1.2rem;
-}
-
-.ticket_reserve2 .reserve_box2> div div {
-  display: flex;
-  margin-left: 10px;
-}
-
-.ticket_reserve2 .reserve_box2> div div p {
-  margin: auto;
-  font-size: 0.9rem;
-}
-
-.ticket_reserve2 .reserve_box2> div div img {
-  height: 20px;
-  margin: 5px 10px;
-}
-
-.container {
-  background: #ececec;
-}
-
-.container .tab_button li{
-  background: #d3d2d2;
-  margin: 0px 5px;
-  border-radius: 20px;
-}
-
-.container .tab_button li.on {
-  background: #b1adad;
-}
-
-.container .tab_cont {
-  border-radius: 15px;
-  box-shadow: 3px 3px 8px 3px rgba(188, 188, 188, 0.565);
-}
-
-.container .tab_cont> :nth-child(1) {
-  display: flex;
-}
-
-.container .tab_cont> :nth-child(1)> :nth-child(1) :nth-child(1) {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
-
-.container .tab_cont> :nth-child(1)> :nth-child(3) :nth-child(1) {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
-
-.container .tab_cont> :nth-child(1)> :nth-child(2) {
-  margin: auto;
-}
-
-.container .tab_cont> :nth-child(2) {
-  border: 1px solid #5f5f5f;
-  border-radius: 15px;
-  box-shadow: 3px 3px 8px 3px rgba(188, 188, 188, 0.565);
-}
-
-
-/*탭영역*/
-
-.container {
-  background: #f0f0f0;
-}
-.tab_area {
-  margin: 0 auto;
-  text-align: center;
-  padding: 40px 0;
-}
-
-/*탭메뉴 버튼*/
-.tab_button {
-  display: flex;
-  justify-content: space-between;
-}
-.tab_button li {
-  float: left;
-  width: 49.5%;
-  background: #ececec;
-  border-radius: 10px 10px 0 0;
-}
-.tab_button li a {
-  padding: 10px 0;
-  display: block;
-  font-size: 16px;
-  font-weight: bold;
-}
-.tab_button li.on {
-  background: #ececec;
-  color: #d60815;
-}
-
-/*탭메뉴 콘텐츠*/
-.tab_cont {
-  width: 100%;
-  background: #fff;
-  display: none;
-}
-.tab_cont.on {
-  display: block;
-}
-.tab_cont div {
-  padding: 20px;
-}
-
-/* itinerary 여정 정보 */
-
-.itinerary> :nth-child(1) {
-  display: flex;
-  justify-content: center;
-}
-
-.itinerary> :nth-child(1) span {
-  margin: auto;
-  padding: 10px 10px;
-}
-
-.itinerary> :nth-child(1) :nth-child(3)  { 
-  border-bottom: 1px solid brown;
-  color: brown;
-}
-
-.itinerary h3 {
-  margin-top: 20px;
-  padding: 30px 0px;
-  font-size: 2.2rem;
-}
-
-.itinerary p {
-  font-size: 1rem;
-}
-
-.itinerary_box {
-  padding: 36px 30px;
-}
-
-.itinerary_box .itinerary_box_list {
-  max-width: 1000px;
-  margin-bottom: 40px;
-  padding: 26px 30px;
-  border: 1px solid #837c7c;
-  border-radius: 10px;
-  text-align: left;
-}
-
-.itinerary_box .itinerary_box_list h4 {
-  font-size: 1.2rem;
-}
-
-.itinerary_box .itinerary_box_list h5 {
-  font-size: 1rem;
-}
-
-.itinerary_box .itinerary_box_list> :nth-child(2) {
-  display: flex;
-  margin: 20px 0px;
-  padding-top: 40px;
-  justify-content: center;
-}
-
-.itinerary_box .itinerary_box_list> :nth-child(2) img {
-  width: 100px;
-  height: 10px;
-  margin: 0px 20px
-}
-
-.itinerary_box .itinerary_box_list> :nth-child(3) {
-  padding: 20px 0px;
-}
-
-.itinerary_box .itinerary_box_list> :nth-child(3)> :nth-child(2) {
-  display: flex;
-  margin: 10px 0px;
-  margin-bottom: 20px;
-}
-
-.itinerary_box .itinerary_box_list> :nth-child(3)> :nth-child(2) p {
-  margin-right: 10px;
-  font-size: 1rem;
-}
-
-/* passenger 승객 정보 */
-
-.passenger> :nth-child(1) h3 {
-  margin-top: 20px;
-  padding: 10px 0px;
-  font-size: 2.2rem;
-}
-
-.passenger> :nth-child(1) p {
-  padding: 10px 0px;
-}
-
-.passenger> :nth-child(1) span {
-  margin: auto;
-  line-height: 1.4rem;
-  color: #d60815;
-}
-
-.passenger input {
-  padding: 10px 0;
-  border: none;
-  border-bottom: 1px solid #837c7c;
-}
-
-.passenger_box1 {
-  border: 1px solid #dddddd;
-  border-radius: 10px;
-  margin: 50px 5%;
-  padding: 50px 30px;
-}
-
-.passenger label::after {
-  content: "*";
-  margin-left: 5px;
-  margin-right: 10px;
-  color: #d60815;
-}
-
-.passenger .passenger_box1 h5 {
-  padding: 20px 0px;
-  font-size: 1.4rem;
-  font-weight: 100;
-  color: #242424;
-}
-
-.passenger .passenger_box1> :nth-child(2) {
-  background-color: #fff;
-  padding: 10px 20px;
-  text-align: left;
-}
-
-.passenger .passenger_box1> :nth-child(2) div {
-  display: flex;
-  padding: 20px 0px;
-  justify-content: space-between;
-}
-
-.passenger .passenger_box1> :nth-child(2)> :nth-child(3) {
-  display: flex;
-  justify-content: space-between;
-}
-
-.passenger .passenger_box1> :nth-child(2)> :nth-child(3) div {
-  margin-left: 10%;
-  padding: 0;
-}
-
-.passenger .passenger_box1> :nth-child(2)> :nth-child(3) input{
-  margin-left: 10px;
-  padding: 5px 30px;
-}
-
-.passenger .passenger_box1> :nth-child(2)> :nth-child(3) label {
-  width: 50px;
-  height: 20px;
-  margin-top: 10px;
-}
-
-/* passenger_box2 연락처 정보 */
-
-.passenger .passenger_box2 {
-  border: 1px solid #dddddd;
-  border-radius: 10px;
-  margin: 50px 5%;
-  padding: 50px 30px;
-}
-
-.passenger .passenger_box2 h5 {
-  padding: 20px 0px;
-  font-size: 1.4rem;
-  font-weight: 100;
-  color: #242424;
-}
-
-
-.passenger .passenger_box2> :nth-child(2) {
-  background-color: #fff;
-  padding: 10px 20px;
-  text-align: left;
-}
-
-.passenger .passenger_box2> :nth-child(2) div {
-  display: flex;
-  padding: 30px 0px;
-  justify-content: space-between;
-}
-
-.passenger .passenger_box2> :nth-child(2)> :nth-child(1), .passenger .passenger_box2> :nth-child(2)> :nth-child(2) {
-  display: flex;
-  height: 60px;
-  justify-content: space-between;
-}
-
-.passenger .passenger_box2 select{
-  width: 150px;
-  padding: 10px 0px;
-  text-align: center;
-}
-
-.passenger button {
-  background: #d60815;
-  color: #fff;
-}
-
-.passenger .passenger_box2> :nth-child(2)> :nth-child(7) {
-  display: block;
-}
-
-.passenger .passenger_box2> :nth-child(2)> :nth-child(7)> :nth-child(1) {
-  display: block;
-}
-
-.passenger .passenger_box2> :nth-child(2)> :nth-child(7) h5 {
-  color: #242424;
-}
-
-.passenger> :nth-child(5) {
-  display: flex;
-  margin-top: 20px;
-  border: 1px solid #b1adad;
-  border-radius: 15px;
-  justify-content: space-between;
-  box-shadow: 3px 3px 8px 3px rgba(188, 188, 188, 0.565);
-}
-
-.passenger> :nth-child(5) h5 {
-  margin: auto;
-  font-size: 1.2rem;
-}
-
-.passenger> :nth-child(5) :nth-child(2) {
-  margin: auto;
-  font-size: 1.2rem;
-}
-
-.passenger button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 10px;
-}
-
-/* laptop start */
-
-@media screen and (min-width: 1366px) {
-    article {
-        margin: auto;
-        max-width: 1200px;
-      } 
-
-      .gnb nav .hd_login {
-        display: none;
-      }
-
-      .searchBar, .sub_p, .mobil_hd{
-        display: none;
-      }
-
-      .ticket_reserve,.ticket_reserve2,.itinerary {
-        max-width: 1000px;
-      }
-
-      .passenger> :nth-child(2), .passenger> :nth-child(3){
-        width:600px;
-        margin: 70px auto;
-      }
-
-      .ticket {
-        background-color: #837c7c;
-        display: block;
-        height: 700px;
-        padding: 40px 100px;
-      }
-
-      .ticket> div {
-        margin: auto;
-        margin-top: 50px;
-        padding: 40px 50px;
-      }
-      
-      .ticket_box div> h3 {
-        padding: 20px 50px;
-        font-size: 2.6rem;
-        font-weight: bold;
-        text-align: left;
-        line-height: 3rem;
-      }
-      
-      .ticket_box {
-        background-color: white;
-        margin-top: 50px;
-        padding: 20px 100px;
-        border-radius: 15px;
-        color:  #242424;
-      }
-
-      .ticket_box li {
-        list-style: none;
-        margin: 0;
-        margin-right: 20px; 
-      }
-      
-      .ticket_wrap ul {
-        display: flex;
-        padding: 20px 50px;
-        border-bottom: 1px solid #4d4c4c;
-      }
-      
-      .ticket_wrap ul p {
-        width: 100px;
-        padding: 16px 20px;
-        font-size: 1.5rem;
-        border-radius: 20px;
-        color: #4d4c4c;
-      }
-      
-      .ticket_tab_btn > li.ticket_active p{
-        background-color: #4d4c4c;
-        color: white;
-      }
-
-      .ticket_content {
-        display: flex;
-        justify-content: space-between;
-      }
-      
-      .ticket_tab_container{
-        width: 100%; 
-        height: 140px;
-        overflow: hidden;
-      }
-      
-      .ticket_tab_container > div{
-        width: 100%; 
-        height: 140px;
-      }
-      
-      .ticket_list_box1 {
-        display: flex;
-        padding: 16px 20px;
-        justify-content: space-around;
-      }
-      
-      .ticket_list_box1 div {
-        padding: 0;
-        margin: auto;
-        text-align: center;
-      }
-      
-      .ticket_list_box1 div h4 {
-        margin-bottom: 8px;
-        font-size: 1.2rem;
-      }
-      
-      .ticket_list_box1 div h5 {
-        font-weight: 100;
-      }
-      
-      .ticket_date1 div {
-        background: #ececec;
-        width: 200px;
-        padding: 16px 20px;
-        border-radius: 10px;
-      }
-      
-      .ticket_date1 input {
-        background: #ececec;
-        width: 100%;
-        border: none;
-        text-align: right;
-      }
-      
-      .ticket_list_box2 {
-        display: flex;
-        padding: 16px 20px;
-        justify-content: space-around;
-      }
-      
-      .ticket_list_box2 div {
-        padding: 0;
-        margin: auto;
-        text-align: center;
-      }
-      
-      .ticket_date2 {
-        padding: 16px 20px;
-      }
-      
-      .ticket_date2 div {
-        background: #ececec;
-        width: 200px;
-        padding: 16px 20px;
-        border-radius: 10px;
-      }
-      
-      .ticket_date2 input {
-        background: #ececec;
-        width: 100%;
-        border: none;
-        text-align: right;
-      }
-
-      .ticket_datea div {
-        background: #ececec;
-        width: 100%;
-        padding: 16px 20px;
-        border-radius: 15px;
-      }
-
-      .ticket_datea div> .ticket_p {
-        display: flex;
-      }
-      
-      .ticket_datea input {
-        background: #ececec;
-        width: 30px;
-        line-height: 1.2rem;
-        border: none;
-      }
-      
-      .ticket_dateb div {
-        background: #ececec;
-        width: 160px;
-        padding: 16px 20px;
-        border-radius: 10px;
-      }
-      
-      .ticket_dateb select {
-        background: #ececec;
-        width: 100%;
-        border: none;
-        text-align: right;
-      }
-
-      .passenger> :nth-child(5) {
-        max-width: 1000px;
-        margin: 50px 5%;
-        padding: 30px 30px;
-      }
-
-      .passenger button {
-        width: 20%;
-        font-size: 1.2rem;
-        border-radius: 10px;
-      }
-
-      .itinerary h3 {
-        font-size: 3rem;
-      }
-
-      .itinerary_box .itinerary_box_list h4 {
-        font-size: 2rem;
-      }
-      
-      .itinerary_box .itinerary_box_list h5 {
-        font-size: 1.3rem;
-      }
-
-      .itinerary_box .itinerary_box_list p {
-        font-size: 1rem;
-      }
-
-      .itinerary_box .itinerary_box_list> :nth-child(2) img {
-        width: 200px;
-        height: 10px;
-        margin: 0px 20px
-      }
-
-}
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  
+     <!-- scrollTrigger -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/ScrollTrigger.min.js"></script>
+  
+     <!-- scrollTo -->
+     <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/ScrollToPlugin.min.js"></script>
+  
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
+  
+</head>
+
+<body>
+
+    <div w3-include-html="header.html"></div>
+  
+    <main>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box1">
+                    <div>
+                        <h3>24년 1월 1일부<br>인천-하네다 매일 운항</h3>
+                        <h5>도쿄의 야경을 감상해보세요</h5>
+                    </div>
+                </div>
+        
+                <div class="swiper-slide box2">
+                    <div>
+                        <h3>제주에서 가을을 만나다</h3>
+                        <h5>#할인쿠폰#경품이벤트<br>#네이버페이 적립혜택</h5>
+                    </div>
+                </div>
+        
+                <div class="swiper-slide box3">
+                    <div>
+                        <h3>A380,A350으로<br>장거리 여행도<br>편안하게 모시겠습니다</h3>
+                        <h5>#유료자석할인쿠폰#기내와이파이쿠폰<br>#유럽#미주</h5>
+                    </div>
+                </div>
+        
+                <div class="swiper-slide box4">
+                    <div>
+                        <h3>인천-차잉마이<br>12월 23일 부 매일운항</h3>
+                        <h5>여유로운 일상과 쉼을 위한 여행<br>이번 겨율, 따뜻한 차잉마이로 매일 운항합니다</h5>
+                    </div>
+                </div>
+        
+                <div class="swiper-slide box5">
+                    <div>
+                        <h3>프라이빗하고 여유로운공간<p class="b5-t">비즈니스 스위트 & 스마티움</p></h3>
+                        <h5>24년 3월부 로스앤젤레스 매일 2회 운항<br>고품격 여행을 위한 선택</h5>
+                    </div>
+                </div>
+        
+                <div class="swiper-slide box6">
+                    <div>
+                        <h3>인천 ↔ 시애틀<br>12월 부<P class="b6-t">주 5회 증편운항</P></h3>
+                        <h5>#일,월,수,금,토 운항<br>#증편기념 시애틀롯데호텔 특별 혜택제공</h5>
+                    </div>
+                </div>
+        
+                <div class="swiper-slide box7">
+                    <div>
+                        <h3>반려동물 동반 탑승객과 반려인<P class="b7-t">을 위한 혜택</P></h3>
+                        <h5>아시아나 X 베이컨</h5>
+                    </div>
+                </div>
+        
+                <div class="swiper-slide box8">
+                    <div>
+                        <h3>예술과 역사의 도시 로마<br>인천-로마 주 5회 운항</h3>
+                        <h5>ASIANA LIKE, 하루 한 번 로마여행 떠나고<br>행운을 잡으세요. 인천-로마 유료좌석 15%할인 중</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div> 
+        </div>
+
+    </main>
+
+    <article class="ticket">
+        <div class="ticket_box">
+            <div>
+                <h3>아시아나와 함께 하는<br>즐거운 여행!<h3>
+            </div>
+            <div class="ticket_wrap">
+                <!--tab 버튼-->
+                <ul class="ticket_tab_btn">
+                  <li class="ticket_active"><a href="#ticket01">
+                    <p>
+                      <span>왕복</span>
+                    </p>
+                  </a></li>
+                  
+                  <li><a href="#ticket02">
+                    <p>
+                      <span>편도</span>
+                    </p>
+                  </a></li>
+                </ul>
+                
+                <!--tab 내용-->
+            </div>
+            <div class="ticket_tab_container">
+                <div class="ticket_content" id="ticket01">
+                    <div class="ticket_list_box1">
+                        <div>
+                          <h4>INC</h4>
+                          <h5>출발지</h5>
+                        </div>
+                        <div class="ticket_mg">
+                          <img src="https://www.koreanair.com/booking__swap--disabled.svg">
+                        </div>
+                        <div>
+                          <h4>YNC</h4>
+                          <h5>도착지</h5>
+                        </div>
+                    </div>
+                    <div class="ticket_date1"> 
+                       <div>
+                        <p>날짜</p>
+                        <input class="dateSelector" placeholder="가는날 ~ 오는날" />
+                       </div>
+                    </div>
+                    <div class="ticket_datea"> 
+                        <div>
+                         <p>탑승객</p>
+                         <p class="ticket_p">
+                            <a>성인<input type="number" min="0" max="5" value="1" class="adt">명,</a>
+                            <a>소아<input type="number" min="0" max="5" value="1" class="kid">명</a>
+                         </p>
+                        </div>
+                    </div>
+                    <div class="ticket_dateb"> 
+                        <div>
+                         <p>좌석</p>
+                         <select>
+                            <option value="prs">좌석 등급 선택</option>
+                            <option value="prs">일반석</option>
+                            <option value="prs">프레스티지석</option>
+                            <option value="prs">일등석</option>
+                         </select>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="ticket_content" id="ticket02">
+                    <div class="ticket_list_box2">
+                        <div>
+                          <h4>INC</h4>
+                          <h5>출발지</h5>
+                        </div>
+                        <div class="ticket_mg">
+                          <img src="https://www.koreanair.com/booking__swap--disabled.svg">
+                        </div>
+                        <div>
+                          <h4>YNC</h4>
+                          <h5>도착지</h5>
+                        </div>
+                    </div>
+                    <div class="ticket_date2"> 
+                        <div>
+                         <p>날짜</p>
+                         <input class="dateSelector" type="date" name="" placeholder="가는날" />
+                        </div>
+                    </div>
+                    <div class="ticket_datea"> 
+                        <div>
+                         <p>탑승객</p>
+                         <p class="ticket_p">
+                            <a>성인<input type="number" min="0" max="5" value="1" class="adt">명,</a>
+                            <a>소아<input type="number" min="0" max="5" value="1" class="kid">명</a>
+                         </p>
+                        </div>
+                    </div>
+                     <div class="ticket_dateb"> 
+                         <div>
+                          <p>좌석</p>
+                          <select>
+                             <option value="prs">좌석 등급 선택</option>
+                             <option value="prs">일반석</option>
+                             <option value="prs">프레스티지석</option>
+                             <option value="prs">일등석</option>
+                          </select>
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+      </article>
+
+      <article class="check">
+        <div class="check_box">
+            <div>
+                <h4>아시아나항공의 상용 고객 우대 프로그램</h4>
+                <h3>Asiana Clup</h3>
+            </div>
+            <div>
+                <div class="mg">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4693/4693459.png">
+                    <p>대기예약 시 우선권</p>
+                </div>
+                <div class="mg"> 
+                    <img src="https://cdn-icons-png.flaticon.com/512/8247/8247376.png">
+                    <p>대기탑승 시 우선권</p>
+                </div>
+                <div class="mg">
+                    <img src="https://cdn-icons-png.flaticon.com/512/7475/7475070.png">
+                    <p>수하물 우선처리</p>
+                </div>
+                <div class="mg">
+                    <img src="https://cdn-icons-png.flaticon.com/512/11322/11322432.png">
+                    <p>마일리지 항공권 양도*</p>
+                </div>
+            </div>
+            <div class="check_bnt">
+                <button>회원안내 </button>
+                <button>클럽 가입하기</button>
+            </div>
+        </div>
+      </article>
+    
+      <article class="special">
+            <div class="swiper special_box">
+                <div>
+                    <h3>최저가 간편 조회</h3>
+                    <h5>*오늘부터 6개월 내 출발하는 항공편의 최저가와 출발일을 간편하게 조회하실 수 있습니다.</h5>
+                </div>
+                <div class="swiper-wrapper special_box_list">
+                    <div class="swiper-slide special_sub_list">
+                        <img src="https://ozimg.flyasiana.com/image_fixed/destination/des_M_JFK_01.jpg">
+                        <div>
+                            <h4>서울/인천 ↔ 뉴욕/ 존 F 케네디</h4>
+                            <p>왕복</p>
+                            <div>
+                                <h4>KRW</h4>
+                                <h4>1,847,100~</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide special_sub_list">
+                        <img src="https://ozimg.flyasiana.com/image_fixed/destination/des_M_FCO_02.jpg">
+                        <div>
+                            <h4>서울/인천 ↔ 로마/ 다빈치</h4>
+                            <p>왕복</p>
+                            <div>
+                                <h4>KRW</h4>
+                                <h4>1,381,500~</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide special_sub_list">
+                        <img src="https://ozimg.flyasiana.com/image_fixed/destination/des_M_LAX_03.jpg">
+                        <div>
+                            <h4>서울/인천 ↔ 로스앤젤레스</h4>
+                            <p>왕복</p>
+                            <div>
+                                <h4>KRW</h4>
+                                <h4>1,455,100~</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide special_sub_list">
+                        <img src="https://ozimg.flyasiana.com/image_fixed/destination/des_M_SGN_01.jpg">
+                        <div>
+                            <h4>서울/인천 ↔ 호찌민</h4>
+                            <p>왕복</p>
+                            <div>
+                                <h4>KRW</h4>
+                                <h4>461,500~</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide special_sub_list">
+                        <img src="https://ozimg.flyasiana.com/image_fixed/destination/des_M_PEK_01.jpg">
+                        <div>
+                            <h4>서울/인천 ↔ 베이징</h4>
+                            <p>왕복</p>
+                            <div>
+                                <h4>KRW</h4>
+                                <h4>217,900~</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide special_sub_list">
+                        <img src="https://ozimg.flyasiana.com/image_fixed/destination/des_M_FRA_01.jpg">
+                        <div>
+                            <h4>서울/인천 ↔ 프랑크푸르트</h4>
+                            <p>왕복</p>
+                            <div>
+                                <h4>KRW</h4>
+                                <h4>1,213,700~</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide special_sub_list">
+                        <img src="https://ozimg.flyasiana.com/image_fixed/destination/des_M_CEB_01.jpg">
+                        <div>
+                            <h4>서울/인천 ↔ 세부</h4>
+                            <p>왕복</p>
+                            <div>
+                                <h4>KRW</h4>
+                                <h4>437,100~</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide special_sub_list">
+                        <img src="https://ozimg.flyasiana.com/image_fixed/destination/des_M_DEL_02.jpg">
+                        <div>
+                            <h4>서울/인천 ↔ 델리</h4>
+                            <p>왕복</p>
+                            <div>
+                                <h4>KRW</h4>
+                                <h4>726,800~</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide special_sub_list">
+                        <img src="https://ozimg.flyasiana.com/image_fixed/destination/des_M_HGH_01.jpg">
+                        <div>
+                            <h4>서울/인천 ↔ 황저우</h4>
+                            <p>왕복</p>
+                            <div>
+                                <h4>KRW</h4>
+                                <h4>441,500~</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide special_sub_list">
+                    <img src="https://ozimg.flyasiana.com/image_fixed/destination/des_M_PVG_02.jpg">
+                    <div>
+                        <h4>서울/인천 ↔ 상하이/푸동</h4>
+                        <p>왕복</p>
+                        <div>
+                            <h4>KRW</h4>
+                            <h4>307,900~</h4>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+      </article>
+
+      <article class="asiana_pick">
+        <div class="asiana_pick_box">
+            <div>
+                <h5>아시아나항공과 함께</h5>
+                <h3>다양한 여행정보를 만나보세요!</h3>
+            </div>
+            <div class="wrap">
+                <ul class="asiana_pick_btn">
+                  <li class="active"><a href="#tab01">
+                    <p>
+                      <span>OZ’s PICK!<br>BEST 여행지</span>
+                    </p>
+                  </a></li>
+                  <li><a href="#tab02">
+                    <p  class="popupopen">
+                      <span>캐빈승무원<br>여행 일기</span>
+                    </p>
+                  </a></li>
+                </ul>
+                <!--tab 내용-->
+                <div class="tab_container">
+                  <div class="content" id="tab01">
+                    <div>
+                        <section>
+                            <img src="https://ozimg.flyasiana.com/temp/image/20180525/72f705a3-e2e8-4e97-8f7a-8eb05d36214a.jpeg">
+                            <div>
+                                <h5>사이판/사이판</h5>
+                                <h4>Saipan</h4>
+                            </div>
+                          </section>
+                          <section>
+                            <img src="https://ozimg.flyasiana.com/temp/image/20180525/7a3accb9-89a4-4d57-8dd8-2635217a6646.jpeg">
+                            <div>
+                                <h5>싱가포르/싱가포르</h5>
+                                <h4>Singapore</h4>
+                            </div>
+                          </section>
+                    </div>
+                    <div>
+                        <section>
+                            <img src="https://ozimg.flyasiana.com/temp/image/20180525/1e11d426-625d-4f3d-9c23-c2c806d3a8e5.jpeg">
+                            <div>
+                                <h5>대한민국/서울</h5>
+                                <h4>Seoul</h4>
+                            </div>
+                          </section>
+                          <section>
+                            <img src="https://ozimg.flyasiana.com/temp/image/20180525/4ab1d016-ed09-41b1-86fb-d564252330e3.jpeg">
+                            <div>
+                                <h5>베트남/호찌민</h5>
+                                <h4>Ho Chi Minh</h4>
+                            </div>
+                          </section>
+                    </div>
+                  </div>
+            </div>
+        </div>
+      </article>
+
+      <article class="gongi">
+        <div>
+            <Img src="https://m.flyasiana.com/C/mobile/image/main/img_service_myreartrip.jpg">
+        </div>
+    </article>
+    
+    <div class="swiper event">
+        <div>
+            <h3>event</h3>
+        </div>
+        <div class="swiper-wrapper eventbox">
+          <div class="swiper-slide eventa">
+                <h5>아시아나 X 뉴욕현대미술관 MoMA 공동프로모션</h5>
+          </div>
+          <div class="swiper-slide eventb">
+            <h5>AGl 골프에약 서비스 신규 마일리지 적립 제휴</h5>
+          </div>
+          <div class="swiper-slide eventc">
+            <h5>VISA INFINTE 서비스를 경험해 보세요</h5>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- 팝업 -->
+
+<div class="popup">
+    <div class="pwrap">
+        <div class="pwrap_box">
+            <a href="#">X 닫기</a>
+            <P>점검중입니다.</P>
+        </div>
+    </div>
+</div> 
+    
+  
+    <div w3-include-html="footer.html"></div>
+  
+</body>
+
+<script>
+    includeHTML();
+</script>
+
+</html>
