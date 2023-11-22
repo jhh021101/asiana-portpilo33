@@ -155,23 +155,6 @@ window.addEventListener("load", function() {
     },
   }); 
 })   
-
-
-
-
-// 다양한 여행 정보를 만나보세요
-window.addEventListener("load", function() {
-  $(document).ready(function(){
-
-    $('.asiana_pick_btn li').click(function(){
-      var value = $(this).find('a').attr('href');
-      $('.tab_container .content').hide(); 
-      $('.tab_container').find(value).show();
-      $(this).addClass('active').siblings().removeClass('active'); 
-      return false; 
-    });
-  });  
-})
       
       
 
@@ -249,6 +232,16 @@ window.addEventListener("load", function() {
 
   
 
+// 로그인 탭
+  $(document).ready(function(){
+    $('.login_tab_btn li').click(function(){
+        var value = $(this).find('a').attr('href');
+        $('.login_tab_container .login_content').hide();
+        $('.login_tab_container').find(value).show();
+        $(this).addClass('login_active').siblings().removeClass('login_active')
+        return false;
+    });
+});
   
 
 // fqa 리스트 아코디언
